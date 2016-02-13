@@ -208,6 +208,9 @@ void vte_terminal_unselect_all(VteTerminal *terminal) _VTE_CXX_NOEXCEPT _VTE_GNU
 _VTE_PUBLIC
 void vte_terminal_select_text(VteTerminal *terminal, long start_col, long start_row,
 			      long end_col, long end_row) _VTE_CXX_NOEXCEPT _VTE_GNUC_NONNULL(1);
+_VTE_PUBLIC
+char *
+vte_terminal_get_selection(VteTerminal *terminal) _VTE_CXX_NOEXCEPT _VTE_GNUC_NONNULL(1);
 
 /* By-word selection */
 _VTE_PUBLIC

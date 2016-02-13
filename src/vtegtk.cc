@@ -3070,6 +3070,18 @@ catch (...)
         vte::log_exception();
 }
 
+char *
+vte_terminal_get_selection(VteTerminal *terminal) noexcept
+try
+{
+	g_return_val_if_fail(VTE_IS_TERMINAL(terminal), NULL);
+	return g_strdup (IMPL(terminal)->m_selection[VTE_SELECTION_PRIMARY]->str);
+}
+catch (...)
+{
+        vte::log_exception();
+}
+
 /**
  * vte_terminal_get_cursor_position:
  * @terminal: a #VteTerminal
