@@ -392,6 +392,11 @@ void vte_terminal_get_cursor_position(VteTerminal *terminal,
                                       glong *row) _VTE_CXX_NOEXCEPT _VTE_GNUC_NONNULL(1);
 
 _VTE_PUBLIC
+void vte_terminal_set_cursor_position(VteTerminal *terminal,
+                                      glong column,
+                                      glong row) _VTE_CXX_NOEXCEPT _VTE_GNUC_NONNULL(1);
+
+_VTE_PUBLIC
 char *vte_terminal_hyperlink_check_event(VteTerminal *terminal,
                                          GdkEvent *event) _VTE_CXX_NOEXCEPT _VTE_GNUC_NONNULL(1) _VTE_GNUC_NONNULL(2) G_GNUC_MALLOC;
 
